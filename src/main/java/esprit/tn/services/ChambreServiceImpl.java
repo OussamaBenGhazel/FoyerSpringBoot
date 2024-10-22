@@ -10,7 +10,7 @@ import java.util.List;
 @Service
 @AllArgsConstructor
 public class ChambreServiceImpl implements IChambreService{
-    ChambreRepository chambreRepository;
+    private final ChambreRepository chambreRepository;
     @Override
     public Chambre addchambre(Chambre chambre) {
         return chambreRepository.save(chambre);
@@ -22,8 +22,8 @@ public class ChambreServiceImpl implements IChambreService{
     }
 
     @Override
-    public void deleteChambre(Long idChambre) {
-        chambreRepository.deleteById(idChambre);
+    public void deleteChambre(Chambre idChambre) {
+        chambreRepository.delete(idChambre);
     }
 
     @Override

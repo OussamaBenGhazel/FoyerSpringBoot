@@ -8,7 +8,7 @@ import java.util.List;
 public interface IChambreService {
     Chambre addchambre (Chambre chambre);
     Chambre updatechambre (Chambre chambre);
-    void deleteChambre (Long idChambre);
+    void deleteChambre (Chambre idChambre);
     List<Chambre> getAllChambre ();
     Chambre findByID (Long id);
 }
